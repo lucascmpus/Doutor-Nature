@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body{
+      width: 100vw;
+      height: 200vh;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    #back-to-top {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      display: none;
+    }
+
+    .back-to-top {
+      opacity: 1;
+      transition: opacity .5s linear;
+    }
+
+    .back-to-top-hide{
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Arw</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illum, vero beatae tempora necessitatibus iusto ullam facilis autem velit tempore quidem atque et doloribus aliquam nulla qui inventore at sapiente.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <h2>A34</h2>
+    <ul>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+    </ul>    
+  </div>
+
+  <div data-aos="fade-right">
+    <h1>Arw</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illum, vero beatae tempora necessitatibus iusto ullam facilis autem velit tempore quidem atque et doloribus aliquam nulla qui inventore at sapiente.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam veritatis rerum magni est aut voluptate? Repudiandae aliquid ex corporis temporibus velit consequatur sequi fugit atque, in numquam minus adipisci?</p>
+  
+    <h2>A34</h2>
+    <ul data-aos="fade-up">
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+      <li>ASd</li>
+    </ul>
+  </div>
+
+  <button id="back-to-top">Voltar ao topo</button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const button = document.getElementById('back-to-top');
+
+    function toTop(){
+      window.scrollTo(0, 0);
+    }
+
+    document.getElementsByTagName('body')[0].onscroll = function() {
+      // console.log(`scrolling: ${window.pageYOffset} `);
+      if (window.pageYOffset > 250  ){
+        button.style = 'display:block'
+        button.classList.add('back-to-top')
+        button.classList.remove('back-to-top-hide')
+      } else {
+        button.style = 'display:none'
+        button.classList.add('back-to-top-hide')
+        button.classList.remove('back-to-top')
+      }
+    };
+
+    button.addEventListener('click', toTop)
+    
+  </script>
+</body>
+</html>
