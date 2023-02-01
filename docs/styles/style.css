@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: Effra;
-  src: url(../../asset/fonts/Effra_Std_Lt.ttf);
+  src: url(../asset/fonts/Effra_Std_Lt.ttf);
 }
 
 *{
@@ -41,7 +41,7 @@ body {
 }
 
 .content-video{
-  background-image: url(../../asset/background-desktop.png);
+  background-image: url(../asset/background-desktop.png);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -165,7 +165,7 @@ body {
 }
 
 .box-card h2 {
-  background-image: url(../../asset/mark.svg);
+  background-image: url(../asset/mark.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
