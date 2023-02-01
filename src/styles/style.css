@@ -384,6 +384,7 @@ body {
 }
 
 .faq-questions ul li {
+  cursor: pointer;
   margin: 20px 0;
 }
 
@@ -392,6 +393,15 @@ body {
   margin-right: 10px;
 }
 
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+}
+
+.faq .active .answer{
+  max-height: 300px;
+}
 
 /* Selling section */
 

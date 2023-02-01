@@ -3,6 +3,7 @@ AOS.init({
 });
 
 const button = document.getElementById('back-to-top');
+const faqs = document.querySelectorAll('.question');
 
 function toTheTop() {
   window.scrollTo(0, 0);
@@ -10,14 +11,16 @@ function toTheTop() {
 
 button.addEventListener('click', toTheTop);
 
+faqs.forEach(faq => {
+  faq.addEventListener('click', () => {
+    faq.classList.toggle('active')
+  });
+})
+
 document.getElementsByTagName('body')[0].onscroll = function () {
   if (window.pageYOffset > 250) {
     button.style = 'display:block';
-    // button.classList.add('back-to-top');
-    // button.classList.remove('back-to-top-hide');
   } else {
     button.style = 'display:none';
-    // button.classList.add('back-to-top-hide');
-    // button.classList.remove('back-to-top');
   };
 };
